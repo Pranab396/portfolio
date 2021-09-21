@@ -1,0 +1,197 @@
+*, 
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    background: rgb(209, 193, 171);
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Navbar */
+
+#navbar {
+    width: 100%;
+    background-color: rgb(56, 72, 87);
+    padding: 0.9rem;
+    position: fixed;
+}
+
+#navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#navbar ul li {
+    padding: 0 2rem;
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.3rem;
+    transition: 9ms ease;
+}
+
+#navbar ul li a:hover,
+#navbar ul li a:focus {
+    color: black;
+}
+
+/* Welcome section or hero section */
+
+#welcome-section {
+    width: 100%;
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    background: linear-gradient(45deg, teal, rgb(113, 158, 158));
+}
+
+#welcome-section h1 {
+    font-size: 3.3rem;
+}
+
+#welcome-section p {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: white;
+    letter-spacing: 0.2rem;
+}
+
+/* Projects section */
+
+#projects {
+    width: 100%;
+    height: 90%;
+    padding-bottom: 9%;
+}
+
+#projects #project-heading {
+    width: 40%;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 3%;
+    font-size: 1.8rem;
+    border-bottom: 2px solid white;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 9%;
+}
+
+.card {
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: rgb(56, 72, 87);
+}
+
+.card img {
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+.card-txt {
+    text-align: center;
+}
+
+.card-txt a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+
+/* Footer section */
+
+footer {
+    width: 100%;
+    height: fit-content;
+    background-color: rgb(56, 72, 87);
+    text-align: center;
+    padding: 3%;
+} 
+
+@media(max-width: 1000px) {
+    .card-container {
+        flex-direction: column;
+    }
+
+    .card {
+        margin: 1% 0;
+    }
+
+    footer {
+        position: relative;
+        height: fit-content;
+        top: 50%;
+    }
+}
+
+@media(max-width: 576px) {
+    #navbar ul {
+        justify-content: center;
+    }
+    
+    #navbar ul li {
+        padding: 0 2rem;
+    }
+
+    #welcome-section h1 {
+        font-size: 2.6rem;
+    }
+
+    #projects #project-heading {
+        width: 60%;
+        font-size: 1.6rem;
+        padding-top: 12%;
+    }
+}
+
+@media(max-width: 390px) {
+    #navbar ul li a {
+        font-size: 1rem;  
+    }
+
+    #welcome-section h1 {
+        font-size: 2rem;
+    }
+
+    #welcome-section p {
+        font-size: 1rem;
+        letter-spacing: 0.2rem;
+    }
+
+    #projects {
+        width: 100%;
+        height: fit-content;
+        padding-bottom: 9%;
+    }
+
+    #projects #project-heading {
+        width: 80%;
+        font-size: 1.3rem;
+        padding-top: 10%;
+    }
+
+    footer {
+        position: relative;
+        height: fit-content;
+        top: 0%;
+    }
+}
